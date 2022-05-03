@@ -1,0 +1,159 @@
+@media screen and (max-width:980px) {
+  #contanier{
+    width: 600px;
+  }
+}
+
+
+*{margin: 0; padding: 0;}
+#contanier{
+  width: 1400px; height: 1100px;
+  margin: 0 auto;
+}
+/*헤더*/
+header{
+  width: 1400px; height: 150px;
+}
+      /*로고*/
+      header > .logo{
+        width: 300px; height: 150px;
+        float: left;
+        position: relative;
+        left: 200px;
+      }
+      /*네비*/
+    header > nav {
+      width: 600px; height: 100px;
+      float: right;
+      position: relative;
+       top: 20px; right: 50px;
+       border: 5px dotted yellowgreen;
+    }
+    ul{
+      list-style: none;
+    }
+    nav li {
+      float: left;
+      position: relative;
+      left: 160px;
+      line-height: 4.0;
+      font-size: 1.6em;
+      width: 100px;
+      text-align: center;
+    }
+    nav li a{
+      text-decoration: none;
+      color: black;
+
+    }
+
+/*메인*/
+#main{
+  width: 1400px; height: 800px;
+  background-color: blue;
+}
+      /*탭메뉴*/
+     #tabMenu{
+        width: 1000px; height: 800px;
+        float: left;
+        background-color: azure;
+      }
+      #tabMenu input[type="radio"]{
+        display: none;
+      }
+      #tabMenu label{
+        display: inline-block;
+        width: 150px;
+        padding: 20px;
+        line-height: 2.0;
+        font-size: x-large;
+        text-align: center;
+      }
+
+      #tabMenu input:checked + label{
+        color: rgb(255, 255, 255);
+        border: 1px solid #ddd;
+        background-color: rgb(157, 250, 144);
+      }
+      .tabContent{
+        display: none;
+      }
+      #tab1:checked ~ #notice1,
+      #tab2:checked ~ #notice2,
+      #tab3:checked ~ #notice3 {
+        display: block;
+      }
+
+
+      .tabContent img{
+        width: 200px; height: 150px;
+      }
+
+      .tabContent .caption{
+        position: absolute;
+        width: 230px; height: 200px;
+        background-color: rgb(37, 204, 4);
+        color: white;
+        font-weight: 600;
+        line-height: 2.5;
+        text-align: center;
+        opacity: 0;/*화면에 보이지 않게*/
+        transition: all 0.8s ease-in-out;/* 나타날때 부드럽게 트랜지션 추가*/
+        z-index: 1;
+      }
+
+
+      .tabCon1{
+        width: 230px; height: 280px;
+
+        text-align: center;
+        margin: 30px;
+        position: relative;
+        top: 20px; left: 30px;
+        display: inline-block;
+      }
+
+
+      .tabCon1:hover .caption{
+        opacity: 1;
+        transform: translateY(-188px);
+        cursor: pointer;
+      }
+
+
+      /*주문서*/
+      aside{
+        width: 400px; height: 800px;
+        float: right;
+        background-color: rgb(200, 253, 189);
+      }
+      #cartHeader{
+        width: 400px; height: 100px;
+        text-align: center;
+        line-height: 4.0;
+        background-color: yellowgreen;
+      }
+      #cartCont{
+        width: 400px; height: 550px;
+      }
+      #cartfooter{
+        width: 400px; height: 150px;
+        background-color: yellowgreen;
+        line-height: 2.0;
+      }
+      #cartfooter h4{
+        text-align: center;
+      }
+
+      #cartfooter button{
+        float: right;
+        padding: 3px;
+        border: 0;
+        margin: 5px;
+      }
+  
+/*푸터*/
+footer{
+  width: 1400px; height: 150px;
+  background-color: rgb(169, 238, 30);
+}
