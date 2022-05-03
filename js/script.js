@@ -27,20 +27,20 @@ let result11 = 0;
 function plus1(count1,price) {
   result += parseInt(price);
   result1 += parseInt(count1);
-  document.querySelector("#order1").innerText = "이탈리안b.m.t " + result1 ;
+  document.querySelector("#order1").innerText = "이탈리안b.m.t " + result1+"개" ;
   document.querySelector("#total").innerText = result+ "원";
 }
 
 function plus2(count2,price) {
   result += parseInt(price);
   result2 += parseInt(count2);
-  document.querySelector("#order2").innerText = "로티세리 치킨 " + result2 ;
+  document.querySelector("#order2").innerText = "로티세리 치킨 " + result2 +"개";
   document.querySelector("#total").innerText = result+ "원";
 }
 function plus3(count2,price) {
   result += parseInt(price);
   result2 += parseInt(count2);
-  document.querySelector("#order").innerText = "터키베이컨" + result2 ;
+  document.querySelector("#order").innerText = "터키베이컨" + result2+"개" ;
   document.querySelector("#total").innerText = result+ "원";
 }
 
@@ -55,7 +55,7 @@ function minus1(count1,price) {
   else
   document.querySelector("#order1").innerText = "이탈리안b.m.t " + result1 ;
   document.querySelector("#total").innerText = result + "원";
-}
+ }
 
 function reset() {
   price;

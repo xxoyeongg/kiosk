@@ -8,40 +8,15 @@
   <link href="https://fonts.googleapis.com/css2?family=Poor+Story&display=swap" rel="stylesheet">
   <title>Document</title>
   <style>
+        @media (max-width: 768px){
+            #contanier {width: 100%;}
+            #tabMenu{float: none; width: 100%;}
+            #cart{float: none; width: 100%;}
+        }
     @media screen and (max-width:390px) {
-      *{
-        font-size: 15px;
- 
-      }
-
-      #contanier{width: 360px; }
-      header > .logo{
-        width: 100%;
-      }
-     header> #nav{
-        width: 100%; height: auto; 
-        float: left;
-        position: static;
-        font-weight: 800;
-      }
-      #tabMenu{
-        float: none;  width: 100%;}
-      #tabMenu label{
-        font-size: medium;
-        width: 25%;
-      }
-      .tabCon1{
-        width: 25%; 
-      }
-      .tabCon1 h2{
-        font-size: 0.6em;
-      }
-      p{
-        font-size: 0.4em;
-        line-height: 5.0;
-      }
-
-      #cart{width: 100%;  float: none;}
+      #main{width: 100%; height: 100%;}
+      #tabMenu{float: none; width: 100%;}
+            #cart{float: none; width: 100%;}
 }
 @media screen and (min-width:391px) {
   #contanier{width: 95%;}
@@ -103,8 +78,8 @@
                   <p>페퍼로니, 살라미 그리고 햄이 만들어내는 최상의 조화!
                     </p>
                     <h3>6000 won</h3>
-                    <button onclick="plus1(6000)">+ </button>
-                    <button onclick="minus1(6000)">- </button>
+                    <button onclick="plus1(1,6000)">+ </button>
+                    <button onclick="minus1(1,6000)">- </button>
                     
 
                 </div>
@@ -119,8 +94,8 @@
                     <p>페퍼로니, 살라미 그리고 햄이 만들어내는 최상의 조화!
                       </p>
                       <h3>6500 won</h3>
-                      <button onclick="plus2(6500)">+ </button>
-                      <button onclick="minus2(6500)">- </button>
+                      <button onclick="plus2(1,6500)">+ </button>
+                      <button onclick="minus2(1,6500)">- </button>
      
                   </div>
                 </div>
@@ -133,47 +108,13 @@
                       <p>페퍼로니, 살라미 그리고 햄이 만들어내는 최상의 조화!
                         </p>
                         <h3>5500 won</h3>
-                        <button onclick="plus3(5500)">+ </button>
-                        <button onclick="minus3(5500)">- </button>
+                        <button onclick="plus3(1,5500)">+ </button>
+                        <button onclick="minus3(1,5500)">- </button>
 
                     </div>
                   </div>
 
-                  <div  class="tabCon1">
-                    <img src="images/샌드위치1.png" >
-                    <h2> 로티세리 바비큐 치킨</h2>
-                    <div class="caption">
-                      <br>
-                      <p>페퍼로니, 살라미 그리고 햄이 만들어내는 최상의 조화!
-                        </p>
-                        <h3>6000 won</h3>
-                    
-                    </div>
-                  </div>
-
-                  <div  class="tabCon1">
-                    <img src="images/샌드위치1.png" >
-                    <h2> 로티세리 바비큐 치킨</h2>
-                    <div class="caption">
-                      <br>
-                      <p>페퍼로니, 살라미 그리고 햄이 만들어내는 최상의 조화!
-                        </p>
-                        <h3>6000 won</h3>
           
-                    </div>
-                  </div>
-
-                  <div  class="tabCon1">
-                    <img src="images/샌드위치1.png" >
-                    <h2> 로티세리 바비큐 치킨</h2>
-                    <div class="caption">
-                      <br>
-                      <p>페퍼로니, 살라미 그리고 햄이 만들어내는 최상의 조화!
-                        </p>
-                        <h3>6000 won</h3>
-                        <button class="number">+</button>
-                    </div>
-                  </div>
 
 
 
@@ -319,7 +260,7 @@
           <div id="cartfooter">
             <h4>주문결과</h4> 
             <br>
-            <p id="total">  합계  :   </p><button id="on" onclick="ordercom();">구매 하기</button>
+            <div id="total">  합계  :   </div><button id="on" onclick="ordercom();">구매 하기</button>
               <button id="off" onclick="reset();">전체 취소</button>
           
           </div>
