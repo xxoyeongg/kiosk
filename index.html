@@ -5,7 +5,50 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poor+Story&display=swap" rel="stylesheet">
   <title>Document</title>
+  <style>
+    @media screen and (max-width:390px) {
+      *{
+        font-size: 15px;
+ 
+      }
+
+      #contanier{width: 360px; }
+      header > .logo{
+        width: 100%;
+      }
+     header> #nav{
+        width: 100%; height: auto; 
+        float: left;
+        position: static;
+        font-weight: 800;
+      }
+      #tabMenu{
+        float: none;  width: 100%;}
+      #tabMenu label{
+        font-size: medium;
+        width: 25%;
+      }
+      .tabCon1{
+        width: 25%; 
+      }
+      .tabCon1 h2{
+        font-size: 0.6em;
+      }
+      p{
+        font-size: 0.4em;
+        line-height: 5.0;
+      }
+
+      #cart{width: 100%;  float: none;}
+}
+@media screen and (min-width:391px) {
+  #contanier{width: 95%;}
+
+
+}
+  </style>
 </head>
 <body>
 
@@ -17,19 +60,19 @@
         <img src="images/서브웨이 로고.jpg" width="300px" height="150px">
       </div>
        <!-- 네비-->
-      <nav>
+      <div id="nav">
         <ul>
           <li>
             <a href="@">한국어 </a>
           </li>
           <li>
-            <a href="@">/ E N G</a>
+            <a href="@">E N G</a>
           </li>
           <li>
-            <a href="@">/ C N N</a>
+            <a href="@">C N N</a>
           </li>
         </ul>
-      </nav>
+      </div>
     </header>
 
 
@@ -53,12 +96,17 @@
             <div class="tabContent" id="notice1" >
               <div  class="tabCon1">
                 <img src="images/샌드위치1.png" >
-                <h2>이탈리안 b.m.t</h2>
+                <h2>이탈리안 b . m.t</h2>
+                
                 <div class="caption">
                   <br>
                   <p>페퍼로니, 살라미 그리고 햄이 만들어내는 최상의 조화!
                     </p>
                     <h3>6000 won</h3>
+                    <button onclick="plus1(6000)">+ </button>
+                    <button onclick="minus1(6000)">- </button>
+                    
+
                 </div>
               </div>
 
@@ -70,7 +118,10 @@
                     <br>
                     <p>페퍼로니, 살라미 그리고 햄이 만들어내는 최상의 조화!
                       </p>
-                      <h3>6000 won</h3>
+                      <h3>6500 won</h3>
+                      <button onclick="plus2(6500)">+ </button>
+                      <button onclick="minus2(6500)">- </button>
+     
                   </div>
                 </div>
 
@@ -81,7 +132,10 @@
                       <br>
                       <p>페퍼로니, 살라미 그리고 햄이 만들어내는 최상의 조화!
                         </p>
-                        <h3>6000 won</h3>
+                        <h3>5500 won</h3>
+                        <button onclick="plus3(5500)">+ </button>
+                        <button onclick="minus3(5500)">- </button>
+
                     </div>
                   </div>
 
@@ -93,6 +147,7 @@
                       <p>페퍼로니, 살라미 그리고 햄이 만들어내는 최상의 조화!
                         </p>
                         <h3>6000 won</h3>
+                    
                     </div>
                   </div>
 
@@ -104,6 +159,7 @@
                       <p>페퍼로니, 살라미 그리고 햄이 만들어내는 최상의 조화!
                         </p>
                         <h3>6000 won</h3>
+          
                     </div>
                   </div>
 
@@ -115,6 +171,7 @@
                       <p>페퍼로니, 살라미 그리고 햄이 만들어내는 최상의 조화!
                         </p>
                         <h3>6000 won</h3>
+                        <button class="number">+</button>
                     </div>
                   </div>
 
@@ -239,20 +296,31 @@
           
       </section>
        <!--주문서-->
-      <aside>
+      <aside id="cart">
+        <script src="js/script.js"></script>
         <div id="cartHeader">
           <h1>주문내역</h1>
         </div>
 
           <div id="cartCont">
-            메뉴
+            <div id="order"></div>
+            <div id="order1"></div>
+            <div id="order2"></div>
+            <div id="order3"></div>
+            <div id="order4"></div>
+            <div id="order5"></div>
+            <div id="order6"></div>
+            <div id="order7"></div>
+            <div id="order8"></div>
+            <div id="order9"></div>
+            <div id="order10"></div>
           </div>
 
           <div id="cartfooter">
             <h4>주문결과</h4> 
             <br>
-            <p>  합계  :   <button>구매 하기</button>
-              <button>전체 취소</button></p>
+            <p id="total">  합계  :   </p><button id="on" onclick="ordercom();">구매 하기</button>
+              <button id="off" onclick="reset();">전체 취소</button>
           
           </div>
       </aside>

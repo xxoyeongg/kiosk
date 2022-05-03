@@ -1,47 +1,45 @@
-@media screen and (max-width:980px) {
-  #contanier{
-    width: 600px;
-  }
+
+
+*{
+  font-family: 'Poor Story', cursive;
+  margin: 0; padding: 0;
+
 }
 
-
-*{margin: 0; padding: 0;}
 #contanier{
-  width: 1400px; height: 1100px;
+  width: 100%; height: 1100px;
   margin: 0 auto;
 }
 /*헤더*/
 header{
-  width: 1400px; height: 150px;
+  background-color: white;
+  width: 100%; height: 150px;
+
 }
       /*로고*/
       header > .logo{
-        width: 300px; height: 150px;
+        width: 60%; height: 150px;
         float: left;
-        position: relative;
-        left: 200px;
       }
       /*네비*/
-    header > nav {
-      width: 600px; height: 100px;
+    header > #nav {
+      width: 40%; height: 100px;
       float: right;
       position: relative;
-       top: 20px; right: 50px;
-       border: 5px dotted yellowgreen;
+      top: 22%;
     }
+    
     ul{
       list-style: none;
     }
-    nav li {
+    #nav li {
       float: left;
-      position: relative;
-      left: 160px;
-      line-height: 4.0;
-      font-size: 1.6em;
-      width: 100px;
+      line-height: 3.5;
+      font-size: 1.2em;
+      width: 30%;
       text-align: center;
     }
-    nav li a{
+    #nav li a{
       text-decoration: none;
       color: black;
 
@@ -49,34 +47,37 @@ header{
 
 /*메인*/
 #main{
-  width: 1400px; height: 800px;
-  background-color: blue;
+  width: 100%; height: 800px;
 }
       /*탭메뉴*/
      #tabMenu{
-        width: 1000px; height: 800px;
+        width: 75%; height: 800px;
         float: left;
-        background-color: azure;
+        background-color: rgb(45, 151, 3);
       }
       #tabMenu input[type="radio"]{
         display: none;
       }
       #tabMenu label{
         display: inline-block;
-        width: 150px;
-        padding: 20px;
+        width: 26%;
+        padding: 3%;
         line-height: 2.0;
-        font-size: x-large;
+        font-size: larger;
         text-align: center;
+        background-color: rgb(45, 151, 3);
+      
       }
 
       #tabMenu input:checked + label{
         color: rgb(255, 255, 255);
         border: 1px solid #ddd;
-        background-color: rgb(157, 250, 144);
+        background-color: rgb(23, 194, 1);
       }
       .tabContent{
         display: none;
+        overflow: hidden;
+
       }
       #tab1:checked ~ #notice1,
       #tab2:checked ~ #notice2,
@@ -86,12 +87,12 @@ header{
 
 
       .tabContent img{
-        width: 200px; height: 150px;
+        width: 100%; height: 150px;
       }
 
       .tabContent .caption{
         position: absolute;
-        width: 230px; height: 200px;
+        width: 100%; height: 80%;
         background-color: rgb(37, 204, 4);
         color: white;
         font-weight: 600;
@@ -104,40 +105,43 @@ header{
 
 
       .tabCon1{
-        width: 230px; height: 280px;
-
+        width: 26%; height: 250px;
+        /* background-color: white; */
         text-align: center;
-        margin: 30px;
+        margin: 2%;
         position: relative;
-        top: 20px; left: 30px;
-        display: inline-block;
+        top: 40px; left: 30px;
+        display: inline-block;  
+      }
+      .tabCon1 h2{
+        font-size: 0.9em;
       }
 
 
       .tabCon1:hover .caption{
         opacity: 1;
-        transform: translateY(-188px);
+        transform: translateY(-180px);
         cursor: pointer;
       }
 
 
       /*주문서*/
-      aside{
-        width: 400px; height: 800px;
+      #cart{
+        width: 25%; height: 800px;
         float: right;
         background-color: rgb(200, 253, 189);
       }
       #cartHeader{
-        width: 400px; height: 100px;
+        width: auto; height: 100px;
         text-align: center;
         line-height: 4.0;
         background-color: yellowgreen;
       }
       #cartCont{
-        width: 400px; height: 550px;
+        width: auto; height: 550px;
       }
       #cartfooter{
-        width: 400px; height: 150px;
+        width: auto; height: 150px;
         background-color: yellowgreen;
         line-height: 2.0;
       }
@@ -149,11 +153,12 @@ header{
         float: right;
         padding: 3px;
         border: 0;
-        margin: 5px;
+        margin: 1%;
       }
   
 /*푸터*/
 footer{
-  width: 1400px; height: 150px;
+  clear: both;
+  width: 100%; height: 150px;
   background-color: rgb(169, 238, 30);
 }
